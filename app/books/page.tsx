@@ -5,7 +5,6 @@ import { useEffect, useState } from "react"
 import { BookRequest, createBook, deleteBook, getAllBooks, updateBook } from "../services/books"
 import Title from "antd/es/typography/Title"
 import { CreateUpdateBook, Mode } from "../components/CreateUpdateBook"
-import { tree } from "next/dist/build/templates/app-page"
 
 export default function BooksPage() {
     const defaultValues = {

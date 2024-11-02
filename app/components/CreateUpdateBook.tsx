@@ -2,7 +2,6 @@ import TextArea from "antd/es/input/TextArea";
 import { BookRequest } from "../services/books";
 import Input from "antd/es/input/Input";
 import Modal from "antd/es/modal/Modal";
-import { title } from "process";
 import { useEffect, useState } from "react";
 
 interface Props {
@@ -27,6 +26,7 @@ export const CreateUpdateBook =({
     handleUpdate,
 }: Props) => {
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [title, setTitle] = useState<string>("");
     const [description, setDescription] = useState<string>("");
     const [price, setPrice] = useState<number>(1);
@@ -40,6 +40,7 @@ export const CreateUpdateBook =({
     const handleOnOk = async () => {
          const bookRequest = {title,description,price};
 
+         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
          mode == Mode.Create ? handleCreate(bookRequest) : handleUpdate(values.id, bookRequest)
     }
 
